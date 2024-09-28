@@ -1,0 +1,10 @@
+Explanation
+XML Parsing Service (XmlParsingService): Parses the XML file, attempts to find elements under the xxx tag, and falls back to x2x if xxx is not found. It stores the key-value pairs in a HashMap.
+
+XDS Connection Service (XdsConnectionService): Makes an HTTP GET request to the XDS endpoint using the provided URL and basic authentication (username and password). It returns the response body as a string.
+
+Controller (XdsController): Exposes two endpoints:
+
+/api/parse-xml: Triggers the XML parsing and returns the key-value pairs.
+/api/connect-xds: Connects to the XDS using one of the URLs, retrieves the data, and returns it.
+RestTemplate Configuration: Configures a RestTemplate bean to be used for making HTTP requests.

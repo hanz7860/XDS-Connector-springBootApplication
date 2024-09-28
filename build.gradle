@@ -1,0 +1,23 @@
+plugins {
+    id 'org.springframework.boot' version '3.1.0' // Use the latest version
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '17' // Adjust to your Java version
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-xml' // For XML parsing
+    implementation 'com.fasterxml.jackson.core:jackson-databind' // For JSON processing
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
